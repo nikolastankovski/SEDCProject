@@ -1,3 +1,4 @@
+//----------------- Table ------------------------------------------
 const data = [
     {
         "date": "06.05.2021",
@@ -62,7 +63,6 @@ const data = [
 ];
 const columns = ["Date", "Table", "Stars", "Comment"];
 const tableContainer = document.getElementById("table-container");
-
 generateTable(data, columns);
 
 function generateTable(data, columns) {
@@ -88,15 +88,23 @@ function generateTable(data, columns) {
 
     data.forEach(item => {
         let tableRow = document.createElement("tr");
-        console.log(item)
         Object.values(item).forEach((key, i) => {
             let td = document.createElement("td");
-            td.textContent = key;
+            if(i == 2){
+                for(let i = 1; i <= key; i++){
+                    let star = document.createElement("i");
+                    star.style.color = "#fce912";
+                    star.classList.add("fas", "fa-star");
+                    td.appendChild(star);
+                }
+            }
+            else{
+                td.textContent = key;
+            }
             tableRow.appendChild(td);
         })
         tbody.append(tableRow);
     })
-
-    console.log(table);
     tableContainer.appendChild(table);
 }
+//------------------------------------------------------------------
