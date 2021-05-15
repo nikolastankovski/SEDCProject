@@ -88,18 +88,18 @@ function generateTable(data, columns) {
 
     data.forEach(item => {
         let tableRow = document.createElement("tr");
-        Object.values(item).forEach((key, i) => {
+        Object.values(item).forEach((val, index) => {
             let td = document.createElement("td");
-            if(i == 2){
-                for(let i = 1; i <= key; i++){
+            if(index == 2){
+                for(let i = 1; i <= val; i++){
                     let star = document.createElement("i");
-                    star.style.color = "#fce912";
                     star.classList.add("fas", "fa-star");
+                    star.style.color = "#fce912";
                     td.appendChild(star);
                 }
             }
             else{
-                td.textContent = key;
+                td.textContent = val;
             }
             tableRow.appendChild(td);
         })

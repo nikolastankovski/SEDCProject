@@ -2,8 +2,7 @@
   "ExpandedNodes": [
     "",
     "\\Views",
-    "\\wwwroot",
-    "\\wwwroot\\json"
+    "\\wwwroot"
   ],
   "SelectedNode": "\\Views\\AdminDashboard.html",
   "PreviewInSolutionExplorer": false
