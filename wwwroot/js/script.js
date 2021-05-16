@@ -94,7 +94,7 @@ function generateTable(data, columns) {
                 for(let i = 1; i <= val; i++){
                     let star = document.createElement("i");
                     star.classList.add("fas", "fa-star");
-                    star.style.color = "#fce912";
+                    // star.style.color = "#ffcd00";
                     td.appendChild(star);
                 }
             }
@@ -108,3 +108,17 @@ function generateTable(data, columns) {
     tableContainer.appendChild(table);
 }
 //------------------------------------------------------------------
+
+
+const totalCustomers = document.getElementById("total-customers");
+const averageFeedbackScore = document.getElementById("average-feedback-score");
+const fiveStarTotal = document.getElementById("5-star-total");
+const fourStarTotal = document.getElementById("4-star-total");
+const threeStarTotal = document.getElementById("3-star-total");
+const twoStarTotal = document.getElementById("2-star-total");
+const oneStarTotal = document.getElementById("1-star-total");
+
+
+
+totalCustomers.textContent = "26";
+averageFeedbackScore.textContent = "4.8";

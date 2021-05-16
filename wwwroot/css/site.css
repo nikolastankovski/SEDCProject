@@ -1,0 +1,16 @@
+:root{
+    --star-color: #ffcd00;
+    --pogress-bar-color: #ffcd00;
+}
+.progress{
+    padding: 0px;
+}
+#feedback-container{
+    margin-bottom: 10px;
+}
+.fa-star{
+    color: var(--star-color) !important;
+}
+.progress-bar{
+    background-color: var(--pogress-bar-color) !important;
+}
