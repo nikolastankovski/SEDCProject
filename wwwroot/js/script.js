@@ -80,6 +80,7 @@ function generateTable(data, columns) {
 
     columns.forEach(item => {
         let th = document.createElement("th");
+            th.classList.add("tableHeader");
         th.textContent = item;
         headerRow.appendChild(th);
     });
@@ -88,7 +89,7 @@ function generateTable(data, columns) {
 
     data.forEach(item => {
         let tableRow = document.createElement("tr");
-        Object.values(item).forEach((val, index) => {
+            Object.values(item).forEach((val, index) => {
             let td = document.createElement("td");
             if(index == 2){
                 for(let i = 1; i <= val; i++){
@@ -96,6 +97,7 @@ function generateTable(data, columns) {
                     star.classList.add("fas", "fa-star");
                     // star.style.color = "#ffcd00";
                     td.appendChild(star);
+                    
                 }
             }
             else{
@@ -106,9 +108,9 @@ function generateTable(data, columns) {
         tbody.append(tableRow);
     })
     tableContainer.appendChild(table);
+    
 }
 //------------------------------------------------------------------
-
 
 const totalCustomers = document.getElementById("total-customers");
 const averageFeedbackScore = document.getElementById("average-feedback-score");
