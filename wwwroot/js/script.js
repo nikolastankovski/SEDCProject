@@ -71,7 +71,7 @@ function generateTable(data, columns) {
     const tbody = document.createElement("tbody");
 
     table.setAttribute("id", "table");
-    table.classList.add("table", "table-striped", "table-bordered");
+    table.classList.add("table", "table-striped", "table-bordered", "table-responsive-sm");
 
     table.appendChild(thead);
     table.appendChild(tbody);

@@ -15,83 +15,91 @@
     <div class="container" style="border: 1px solid black;">
         <div id="feedback-container" class="row">
             <h1 id="feedbackHeader">Feedback</h1>
-            <div class="col-md-6 col-12">
-                <h1 id="headerText">Average Feedback</h1>
-                <div class="row">
-                    <span class="col-3">
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                    </span>
-                    <div class="progress col">
-                        <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valuemax="100"></div>
+            <h1 id="headerText">Average Feedback</h1>
+            <div class="row">
+                <div class="col-xl-7 col-lg-12" id="star-feedback-container">
+                    <div class="row">
+                        <span class="col-3">
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                        </span>
+                        <div class="progress col">
+                            <div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="col-2 text-center" id="5-star-total">
+                            24
+                        </div>
                     </div>
-                    <div class="col-2 text-center" id="5-star-total">
-                        24
+                    <div class="row ">
+                        <span class="col-3">
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                        </span>
+                        <div class="progress col">
+                            <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="col-2 text-center" id="4-star-total">
+                            2
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="col-3">
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                        </span>
+                        <div class="progress col">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="col-2 text-center" id="3-star-total">
+                            0
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="col-3">
+                            <i class="d-inline-block fas fa-star"></i>
+                            <i class="d-inline-block fas fa-star"></i>
+                        </span>
+                        <div class="progress col">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="col-2 text-center" id="2-star-total">
+                            0
+                        </div>
+                    </div>
+                    <div class="row">
+                        <span class="col-3">
+                            <i class="d-inline-block fas fa-star"></i>
+                        </span>
+                        <div class="progress col">
+                            <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                        <div class="col-2 text-center" id="1-star-total">
+                            0
+                        </div>
                     </div>
                 </div>
-                <div class="row ">
-                    <span class="col-3">
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                    </span>
-                    <div class="progress col">
-                        <div class="progress-bar" role="progressbar" style="width: 40%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valuemax="100"></div>
+                <div class="col-xl-5 col-lg-12" id="average-feedback-container">
+                    <div class="col-12 align-items-start">
+                        <div class="row">
+                            <h3 class="col-xl-8 col-lg-6 col-10">Total customers:</h3>
+                            <h3 class="col-xl-4 col-lg-6 col-2"><span id="total-customers"></span></h3>
+                        </div>
+                        <div class="row">
+                            <h3 class="col-xl-8 col-lg-6 col-10">Average feedback score:</h3>
+                            <h3 class="col-xl-4 col-lg-6 col-2"><span id="average-feedback-score"></span></h3>
+                        </div>
                     </div>
-                    <div class="col-2 text-center" id="4-star-total">
-                        2
-                    </div>
-                </div>
-                <div class="row">
-                    <span class="col-3">
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                    </span>
-                    <div class="progress col">
-                        <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="col-2 text-center" id="3-star-total">
-                        0
-                    </div>
-                </div>
-                <div class="row">
-                    <span class="col-3">
-                        <i class="d-inline-block fas fa-star"></i>
-                        <i class="d-inline-block fas fa-star"></i>
-                    </span>
-                    <div class="progress col">
-                        <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="col-2 text-center" id="2-star-total">
-                        0
-                    </div>
-                </div>
-                <div class="row">
-                    <span class="col-3">
-                        <i class="d-inline-block fas fa-star"></i>
-                    </span>
-                    <div class="progress col">
-                        <div class="progress-bar" role="progressbar" style="width: 10%" aria-valuenow="25"
-                            aria-valuemin="0" aria-valuemax="100"></div>
-                    </div>
-                    <div class="col-2 text-center" id="1-star-total">
-                        0
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-6 col-12">
-                <div class="d-flex flex-column align-items-start text-center" id="average-feedback-container">
-                    <h3>Total customers: <span id="total-customers"></span></h3>
-                    <h3>Average feedback score: <span id="average-feedback-score"></span></h3>
                 </div>
             </div>
         </div>
