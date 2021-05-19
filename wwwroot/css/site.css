@@ -58,6 +58,28 @@
   text-align: start;
   font-size: 25px;
 }
+#columnDate{
+  cursor: pointer;
+}
+#columnDate:hover {
+  opacity: 0;
+  transition: opacity 100ms ease-in;
+}
+#columnTable{
+  cursor: pointer;
+}
+#columnStars{
+  cursor: pointer;
+}
+#columnComment{
+  cursor: pointer;
+}
+.progress{
+  height: auto !important;
+}
+#star-feedback-container .row{
+  margin-bottom: 5px;
+}
 
 
 @media only screen and (max-width: 1199px) {
