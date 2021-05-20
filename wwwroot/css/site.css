@@ -4,6 +4,7 @@
   --star-color: #ffcd00;
   --pogress-bar-color: #ffcd00;
   --text-color: #4eb6b3;
+  --text-color-darker: #3b7a78;
 }
 * {
   box-sizing: border-box;
@@ -54,25 +55,20 @@
   margin-top: 20px;
 }
 .tableHeader {
-  color: var(--text-color) !important;
+  /* color: var(--text-color) !important; */
+  color: var(--text-color);
+  transition: color 100ms ease-in;
   text-align: start;
   font-size: 25px;
+  user-select: none;
 }
-#columnDate{
+.sortableHeader:hover {
+  /* opacity: 0; */
+  /* transition: opacity 100ms ease-in; */
+
   cursor: pointer;
-}
-#columnDate:hover {
-  opacity: 0;
-  transition: opacity 100ms ease-in;
-}
-#columnTable{
-  cursor: pointer;
-}
-#columnStars{
-  cursor: pointer;
-}
-#columnComment{
-  cursor: pointer;
+  color: var(--text-color-darker);
+  transition: color 100ms ease-in;
 }
 .progress{
   height: auto !important;
