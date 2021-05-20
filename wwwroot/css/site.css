@@ -60,6 +60,7 @@
   transition: color 100ms ease-in;
   text-align: start;
   font-size: 25px;
+  user-select: none;
 }
 .sortableHeader:hover {
   /* opacity: 0; */
