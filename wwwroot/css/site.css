@@ -61,7 +61,7 @@
   text-align: start;
   font-size: 25px;
 }
-.tableHeader:hover {
+.sortableHeader:hover {
   /* opacity: 0; */
   /* transition: opacity 100ms ease-in; */
 
