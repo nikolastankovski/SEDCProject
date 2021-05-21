@@ -49,6 +49,18 @@ let data = [
         "comment": "test comment 8"
     },
     {
+        "date": new Date("2021-10-08"),
+        "tableNo": 3,
+        "stars": 3,
+        "comment": "test comment 8"
+    },
+    {
+        "date": new Date("2021-10-08"),
+        "tableNo": 3,
+        "stars": 3,
+        "comment": "test comment 8"
+    },
+    {
         "date": new Date("2021-11-17"),
         "tableNo": 4,
         "stars": 2,
@@ -152,7 +164,6 @@ const fourStarTotal = document.getElementById("4-star-total");
 const threeStarTotal = document.getElementById("3-star-total");
 const twoStarTotal = document.getElementById("2-star-total");
 const oneStarTotal = document.getElementById("1-star-total");
-// const columnComment = document.getElementById("columnComment");
 
 
 totalCustomers.textContent = data.length;
@@ -163,7 +174,7 @@ totalCustomers.textContent = data.length;
     for (let x of data) {
         arrayStars.push(x.stars);
     }
-    let average = arrayStars.reduce((a, b) => a + b, 0) / data.length;
+    let average = (arrayStars.reduce((a, b) => a + b, 0) / data.length).toFixed(2);
     averageFeedbackScore.textContent = average
 })();
 // -------------------------------------------------------------------
@@ -172,3 +183,28 @@ totalCustomers.textContent = data.length;
 sortData("date", "desc");
 generateTable(data);
 
+function fillProgressBar() {
+    // parse ratings from 'data'
+    let arr = [fiveStarTotal, fourStarTotal, threeStarTotal, twoStarTotal, oneStarTotal];
+    let ctr = [0, 0, 0, 0, 0];
+    let total = 0;
+    data.map(x => x.stars).forEach(x => ctr[x - 1]++);
+    ctr.reverse();
+    for (let i = 0; i < 5; i++) {
+        arr[i].textContent = ctr[i];
+        total += ctr[i];
+    }
+
+    // get max 
+    let maxStars = Math.max(...ctr);
+
+    let rows = document.getElementById("star-feedback-container").getElementsByClassName("row");
+
+    for (let i = 0; i < 5; i++) {
+        rows[i].querySelector(".progress-bar:first-child").setAttribute("aria-valuemax", total);
+        rows[i].querySelector(".progress-bar:first-child").setAttribute("aria-valuenow", arr[i].textContent);
+        rows[i].querySelector(".progress-bar:first-child").style.width = `${parseFloat(arr[i].textContent) * 100 / total}%`;
+    }
+}
+
+fillProgressBar();
