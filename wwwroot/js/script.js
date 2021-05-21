@@ -187,23 +187,23 @@ function fillProgressBar() {
     // parse ratings from 'data'
     let arr = [fiveStarTotal, fourStarTotal, threeStarTotal, twoStarTotal, oneStarTotal];
     let ctr = [0, 0, 0, 0, 0];
+    let total = 0;
     data.map(x => x.stars).forEach(x => ctr[x - 1]++);
     ctr.reverse();
     for (let i = 0; i < 5; i++) {
         arr[i].textContent = ctr[i];
+        total += ctr[i];
     }
 
     // get max 
-    console.log(arr.map(x => parseFloat(x.textContent.trim())));
-    let maxStars = Math.max(...arr.map(x => parseFloat(x.textContent.trim())));
-    console.log(maxStars);
+    let maxStars = Math.max(...ctr);
 
     let rows = document.getElementById("star-feedback-container").getElementsByClassName("row");
 
     for (let i = 0; i < 5; i++) {
-        rows[i].querySelector(".progress-bar:first-child").setAttribute("aria-valuemax", maxStars);
+        rows[i].querySelector(".progress-bar:first-child").setAttribute("aria-valuemax", total);
         rows[i].querySelector(".progress-bar:first-child").setAttribute("aria-valuenow", arr[i].textContent);
-        rows[i].querySelector(".progress-bar:first-child").style.width = `${parseFloat(arr[i].textContent) * 100 / maxStars}%`;
+        rows[i].querySelector(".progress-bar:first-child").style.width = `${parseFloat(arr[i].textContent) * 100 / total}%`;
     }
 }
 
