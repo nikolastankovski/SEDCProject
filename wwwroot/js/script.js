@@ -174,7 +174,7 @@ totalCustomers.textContent = data.length;
     for (let x of data) {
         arrayStars.push(x.stars);
     }
-    let average = arrayStars.reduce((a, b) => a + b, 0) / data.length;
+    let average = (arrayStars.reduce((a, b) => a + b, 0) / data.length).toFixed(2);
     averageFeedbackScore.textContent = average
 })();
 // -------------------------------------------------------------------
