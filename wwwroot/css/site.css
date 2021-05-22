@@ -1,21 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-
+@font-face{
+  font-family: 'Ubuntu';
+  src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
+}
 :root {
   --star-color: #ffcd00;
   --pogress-bar-color: #ffcd00;
   --text-color: #4eb6b3;
   --text-color-darker: #3b7a78;
+  --body-bgcolor: #163c3b;
 }
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Lato", sans-serif;
+  font-family: 'Ubuntu';
+}
+body{
+  background-color: var(--body-bgcolor);
 }
 .container {
   margin-top: 20px;
-  border-radius: 10px;
   padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 30px black;
 }
 #feedbackHeader {
   margin-bottom: 20px;
@@ -25,9 +32,9 @@
 #headerText {
   color: var(--text-color) !important;
   font-size: 30px;
+  font-weight: bold;
 }
 #feedback-container {
-  margin-top: 10px;
   margin-bottom: 10px;
 }
 .progress {
@@ -45,7 +52,6 @@
 }
 .fa-star {
   color: var(--star-color) !important;
-  text-shadow: 1px 1px 1px rgb(255, 197, 153);
   letter-spacing: 4px;
 }
 .progress-bar {
@@ -55,7 +61,6 @@
   margin-top: 20px;
 }
 .tableHeader {
-  /* color: var(--text-color) !important; */
   color: var(--text-color);
   transition: color 100ms ease-in;
   text-align: start;
@@ -64,6 +69,8 @@
 }
 
 .sortableHeader:hover {
+<<<<<<< HEAD
+=======
   cursor: pointer;
   background-color: var(--text-color-darker);
   color: white;
@@ -75,6 +82,7 @@
   border: none;
 }
 #columnComment:hover {
+>>>>>>> 0a1cdd922baf5484a1406a053434a36b2584bd04
   cursor: pointer;
   background-color: var(--text-color-darker);
   color: white;
@@ -92,6 +100,25 @@
 #star-feedback-container .row {
   margin-bottom: 5px;
 }
+<<<<<<< HEAD
+.sortableHeader:hover {
+  cursor: pointer;
+  background-color: var(--text-color-darker);
+  color: white;
+  border-radius: 5px;
+  transition: all 0.2s;
+  border: none;
+}
+#filters-container{
+  margin: 0;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+#filters-container > *{
+  padding: 0;
+}
+=======
+>>>>>>> 0a1cdd922baf5484a1406a053434a36b2584bd04
 
 @media only screen and (max-width: 1199px) {
   #average-feedback-container {
