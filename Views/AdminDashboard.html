@@ -10,17 +10,11 @@
     <link rel="stylesheet" href="../wwwroot/lib/bootstrap-5.0.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../wwwroot/css/site.css">
 </head>
-
 <body>
-
     <div class="container" style="border: 1px solid black;">
-        <!-- dark mode swither -->
-        <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-            <label class="form-check-label" for="flexSwitchCheckDefault">Switch to Dark Mode</label>
-        </div>
-        <div id="feedback-container" class="row">
-            <h1 id="feedbackHeader">Feedback Page </h1>
+        <div id="feedback-container">
+            <div class="row">
+                <h1 id="feedbackHeader">Feedback</h1>
             <h1 id="headerText">Average Feedback</h1>
             <div class="row">
                 <div class="col-xl-7 col-lg-12" id="star-feedback-container">
@@ -33,7 +27,7 @@
                             <i class="d-inline-block fas fa-star"></i>
                         </span>
                         <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div class="col-xl-2 col-1 text-center" id="5-star-total"></div>
                     </div>
@@ -45,7 +39,7 @@
                             <i class="d-inline-block fas fa-star"></i>
                         </span>
                         <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div class="col-xl-2 col-1 text-center" id="4-star-total"></div>
                     </div>
@@ -56,7 +50,7 @@
                             <i class="d-inline-block fas fa-star"></i>
                         </span>
                         <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div class="col-xl-2 col-1 text-center" id="3-star-total"></div>
                     </div>
@@ -66,7 +60,7 @@
                             <i class="d-inline-block fas fa-star"></i>
                         </span>
                         <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div class="col-xl-2 col-1 text-center" id="2-star-total"></div>
                     </div>
@@ -75,7 +69,7 @@
                             <i class="d-inline-block fas fa-star"></i>
                         </span>
                         <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                         <div class="col-xl-2 col-1 text-center" id="1-star-total"></div>
                     </div>
@@ -93,23 +87,26 @@
                     </div>
                 </div>
             </div>
+            </div>
         </div>
-        <div id="filters-container" class="row">
-            <div class="col-2">
-                <label class="form-label" for="form-select">Date To</label>
-                <select class="form-select"></select>
-            </div>
-            <div class="col-2 offset-1">
-                <label class="form-label" for="form-select">Date From</label>
-                <select class="form-select"></select>
-            </div>
-            <div class="col-2 offset-1">
-                <label class="form-label" for="form-select">Table Number</label>
-                <select class="form-select"></select>
-            </div>
-            <div class="col-2 offset-1">
-                <label class="form-label" for="form-select">Stars</label>
-                <select class="form-select"></select>
+        <div id="filters-container">
+            <div class="row">
+                <div class="col-2">
+                    <label class="form-label" for="form-select">Date From</label>
+                    <select class="form-select"></select>
+                </div>
+                <div class="col-2 offset-1">
+                    <label class="form-label" for="form-select">Date From</label>
+                    <select class="form-select"></select>
+                </div>
+                <div class="col-2 offset-1">
+                    <label class="form-label" for="form-select">Table number</label>
+                    <select class="form-select"></select>
+                </div>
+                <div class="col-2 offset-1">
+                    <label class="form-label" for="form-select">Stars</label>
+                    <select class="form-select"></select>
+                </div>
             </div>
         </div>
         <div id="table-container" class="col-12">
@@ -117,15 +114,16 @@
                 <thead id="tableHead">
                     <th class="tableHeader sortableHeader" id="columnDate">Date <i
                             class="fas fa-long-arrow-alt-down"></i><i class="fas fa-long-arrow-alt-up"
-                            style="display: none"></i></th>
-                    <th class="tableHeader sortableHeader" id="columnTable">Table <i class="fas fa-long-arrow-alt-up"
-                            style="display: none"></i><i class="fas fa-long-arrow-alt-down"></i></th>
-                    <th class="tableHeader sortableHeader" id="columnStars">Stars <i class="fas fa-long-arrow-alt-up"
-                            style="display: none"></i><i class="fas fa-long-arrow-alt-down"></i></th>
+                            style="display: none;"></i></th>
+                    <th class="tableHeader sortableHeader" id="columnTable">Table <i
+                            class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></th>
+                    <th class="tableHeader sortableHeader" id="columnStars">Stars <i
+                            class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></th>
                     <!-- Can't sort by comment -->
                     <th class="tableHeader" id="columnComment">Comment</th>
                 </thead>
-                <tbody id="tableBody"></tbody>
+                <tbody id="tableBody">
+                </tbody>
             </table>
         </div>
     </div>
