@@ -1,8 +1,8 @@
-
 @font-face {
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
   src: url("../fonts/Ubuntu/Ubuntu-Regular.ttf");
 }
+
 :root {
   --star-color: #ffcd00;
   --pogress-bar-color: #ffcd00;
@@ -10,20 +10,25 @@
   --text-color-darker: #3b7a78;
   --body-bgcolor: #163c3b;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: 'Ubuntu';
+  font-family: "Ubuntu";
 }
-body{
+
+body {
   background-color: var(--body-bgcolor);
 }
+
 .container {
   margin-top: 20px;
+  margin-bottom: 20px;
   padding: 20px;
   background-color: white;
   box-shadow: 0 0 30px black;
+  border-radius: 10px;
 }
 #feedbackHeader {
   margin-bottom: 20px;
@@ -73,10 +78,10 @@ body{
   color: var(--text-color-darker);
   transition: color 100ms ease-in;
 }
-.progress{
+.progress {
   height: auto !important;
 }
-#star-feedback-container .row{
+#star-feedback-container .row {
   margin-bottom: 5px;
 }
 .sortableHeader:hover {
@@ -87,14 +92,32 @@ body{
   transition: all 0.2s;
   border: none;
 }
-#filters-container{
+#filters-container {
   margin: 0;
   margin-top: 30px;
   margin-bottom: 20px;
+  color: var(--text-color);
+  font-size: 15px;
+  text-align: center; /*textot da bide na sredina ili na sam start */
+  font-weight: bold;
+}
+
+.form-select {
+  outline: none;
+  color: var(--text-color-darker);
+  /* border: 1px solid var(--text-color-darker);   da ima ili da nema border inicinjalno??     */
+  box-shadow: none;
+}
+
+.form-select:focus-visible {
+  box-shadow: -0.5px -0.5px 2px var(--text-color-darker);
+  outline: none;
+  border: 0.5px solid var(--text-color);
+  text-decoration: underline;
 }
 
 @media only screen and (max-width: 1199px) {
-  #average-feedback-container{
+  #average-feedback-container {
     margin-top: 20px;
   }
 }
