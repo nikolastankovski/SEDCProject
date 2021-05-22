@@ -107,13 +107,15 @@ body {
   color: var(--text-color-darker);
   /* border: 1px solid var(--text-color-darker);   da ima ili da nema border inicinjalno??     */
   box-shadow: none;
+  width: 180px; /* width za dropdown list*/
+  cursor: pointer;
 }
 
 .form-select:focus-visible {
   box-shadow: -0.5px -0.5px 2px var(--text-color-darker);
   outline: none;
   border: 0.5px solid var(--text-color);
-  text-decoration: underline;
+  color: var(--text-color-darker);
 }
 
 @media only screen and (max-width: 1199px) {

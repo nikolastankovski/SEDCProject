@@ -10,94 +10,100 @@
     <link rel="stylesheet" href="../wwwroot/lib/bootstrap-5.0.0-dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="../wwwroot/css/site.css">
 </head>
+
 <body>
     <div class="container" style="border: 1px solid black;">
         <div id="feedback-container">
             <div class="row">
                 <h1 id="feedbackHeader">Feedback</h1>
-            <h1 id="headerText">Average Feedback</h1>
-            <div class="row">
-                <div class="col-xl-7 col-lg-12" id="star-feedback-container">
-                    <div class="row">
-                        <span class="col-3">
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                        </span>
-                        <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="col-xl-2 col-1 text-center" id="5-star-total"></div>
-                    </div>
-                    <div class="row ">
-                        <span class="col-3">
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                        </span>
-                        <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="col-xl-2 col-1 text-center" id="4-star-total"></div>
-                    </div>
-                    <div class="row">
-                        <span class="col-3">
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                        </span>
-                        <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="col-xl-2 col-1 text-center" id="3-star-total"></div>
-                    </div>
-                    <div class="row">
-                        <span class="col-3">
-                            <i class="d-inline-block fas fa-star"></i>
-                            <i class="d-inline-block fas fa-star"></i>
-                        </span>
-                        <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="col-xl-2 col-1 text-center" id="2-star-total"></div>
-                    </div>
-                    <div class="row">
-                        <span class="col-3">
-                            <i class="d-inline-block fas fa-star"></i>
-                        </span>
-                        <div class="progress col">
-                            <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                        <div class="col-xl-2 col-1 text-center" id="1-star-total"></div>
-                    </div>
-                </div>
-                <div class="col-xl-5 col-lg-12" id="average-feedback-container">
-                    <div class="col-12 align-items-start">
+                <h1 id="headerText">Average Feedback</h1>
+                <div class="row">
+                    <div class="col-xl-7 col-lg-12" id="star-feedback-container">
                         <div class="row">
-                            <h3 class="col-xl-8 col-lg-6 col-10">Total customers:</h3>
-                            <h3 class="col-xl-4 col-lg-6 col-2"><span id="total-customers"></span></h3>
+                            <span class="col-3">
+                                <i class="ex-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                            </span>
+                            <div class="progress col">
+                                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-1 text-center" id="5-star-total"></div>
+                        </div>
+                        <div class="row ">
+                            <span class="col-3">
+                                <i class="d-inline-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                            </span>
+                            <div class="progress col">
+                                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-1 text-center" id="4-star-total"></div>
                         </div>
                         <div class="row">
-                            <h3 class="col-xl-8 col-lg-6 col-10">Average feedback score:</h3>
-                            <h3 class="col-xl-4 col-lg-6 col-2"><span id="average-feedback-score"></span></h3>
+                            <span class="col-3">
+                                <i class="d-inline-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                            </span>
+                            <div class="progress col">
+                                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-1 text-center" id="3-star-total"></div>
+                        </div>
+                        <div class="row">
+                            <span class="col-3">
+                                <i class="d-inline-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
+                            </span>
+                            <div class="progress col">
+                                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-1 text-center" id="2-star-total"></div>
+                        </div>
+                        <div class="row">
+                            <span class="col-3">
+                                <i class="d-inline-block fas fa-star"></i>
+                            </span>
+                            <div class="progress col">
+                                <div class="progress-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100">
+                                </div>
+                            </div>
+                            <div class="col-xl-2 col-1 text-center" id="1-star-total"></div>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-lg-12" id="average-feedback-container">
+                        <div class="col-12 align-items-start">
+                            <div class="row">
+                                <h3 class="col-xl-8 col-lg-6 col-10">Total customers:</h3>
+                                <h3 class="col-xl-4 col-lg-6 col-2"><span id="total-customers"></span></h3>
+                            </div>
+                            <div class="row">
+                                <h3 class="col-xl-8 col-lg-6 col-10">Average feedback score:</h3>
+                                <h3 class="col-xl-4 col-lg-6 col-2"><span id="average-feedback-score"></span></h3>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
             </div>
         </div>
         <div id="filters-container">
             <div class="row">
                 <div class="col-2">
                     <label class="form-label" for="form-select">Date From</label>
-                    <select class="form-select"></select>
+                    <select class="form-select" id="dateFrom"></select>
                 </div>
                 <div class="col-2 offset-1">
                     <label class="form-label" for="form-select">Date To</label>
-                    <select class="form-select"></select>
+                    <select class="form-select" id="dateTo"></select>
                 </div>
                 <div class="col-2 offset-1">
                     <label class="form-label" for="form-select">Table number</label>
@@ -119,7 +125,6 @@
                             class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></th>
                     <th class="tableHeader sortableHeader" id="columnStars">Stars <i
                             class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></th>
-                    <!-- Can't sort by comment -->
                     <th class="tableHeader" id="columnComment">Comment</th>
                 </thead>
                 <tbody id="tableBody">
