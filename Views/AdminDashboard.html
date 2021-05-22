@@ -12,9 +12,15 @@
 </head>
 
 <body>
+
     <div class="container" style="border: 1px solid black;">
+        <!-- dark mode swither -->
+        <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Switch to Dark Mode</label>
+        </div>
         <div id="feedback-container" class="row">
-            <h1 id="feedbackHeader">Feedback</h1>
+            <h1 id="feedbackHeader">Feedback Page </h1>
             <h1 id="headerText">Average Feedback</h1>
             <div class="row">
                 <div class="col-xl-7 col-lg-12" id="star-feedback-container">
@@ -108,11 +114,11 @@
                 <thead id="tableHead">
                     <th class="tableHeader sortableHeader" id="columnDate">Date <i
                             class="fas fa-long-arrow-alt-down"></i><i class="fas fa-long-arrow-alt-up"
-                            style="display: none;"></i></th>
-                    <th class="tableHeader sortableHeader" id="columnTable">Table <i
-                            class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></th>
-                    <th class="tableHeader sortableHeader" id="columnStars">Stars <i
-                            class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></th>
+                            style="display: none"></i></th>
+                    <th class="tableHeader sortableHeader" id="columnTable">Table <i class="fas fa-long-arrow-alt-up"
+                            style="display: none"></i><i class="fas fa-long-arrow-alt-down"></i></th>
+                    <th class="tableHeader sortableHeader" id="columnStars">Stars <i class="fas fa-long-arrow-alt-up"
+                            style="display: none"></i><i class="fas fa-long-arrow-alt-down"></i></th>
                     <!-- Can't sort by comment -->
                     <th class="tableHeader" id="columnComment">Comment</th>
                 </thead>
