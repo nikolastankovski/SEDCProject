@@ -9,6 +9,7 @@
   --text-color: #4eb6b3;
   --text-color-darker: #3b7a78;
   --body-bgcolor: #163c3b;
+  --input-border-color: #4eb6b3;
 }
 
 * {
@@ -30,12 +31,12 @@ body {
   box-shadow: 0 0 30px black;
   border-radius: 10px;
 }
-#feedbackHeader {
+#page-title {
   margin-bottom: 20px;
   color: #b1b1b1;
   font-weight: bold;
 }
-#headerText {
+#average-feedback-header {
   color: var(--text-color) !important;
   font-size: 30px;
   font-weight: bold;
@@ -66,14 +67,14 @@ body {
 #table {
   margin-top: 20px;
 }
-.tableHeader {
+.table-header {
   color: var(--text-color);
   transition: color 100ms ease-in;
   text-align: start;
   font-size: 25px;
   user-select: none;
 }
-.sortableHeader:hover {
+.sortable-header:hover {
   cursor: pointer;
   color: var(--text-color-darker);
   transition: color 100ms ease-in;
@@ -84,7 +85,7 @@ body {
 #star-feedback-container .row {
   margin-bottom: 5px;
 }
-.sortableHeader:hover {
+.sortable-header:hover {
   cursor: pointer;
   background-color: var(--text-color-darker);
   color: white;
@@ -96,25 +97,24 @@ body {
   margin: 0;
   margin-top: 30px;
   margin-bottom: 20px;
+}
+#filters-container label{
   color: var(--text-color);
   font-size: 15px;
-  text-align: start; /*textot da bide na sredina ili na sam start */
   font-weight: bold;
 }
-
+#filters-container > .row div{
+  margin-top: 10px;
+}
 .form-select {
   outline: none;
   color: var(--text-color-darker);
-  /* border: 1px solid var(--text-color-darker);   da ima ili da nema border inicinjalno??     */
   box-shadow: none;
-  width: 180px; /* width za dropdown list*/
   cursor: pointer;
 }
-
 .form-select:focus-visible {
-  box-shadow: -0.5px -0.5px 2px var(--text-color-darker);
-  outline: none;
-  border: 0.5px solid var(--text-color);
+  box-shadow: 0 0 5px var(--text-color-darker);
+  border: 1px solid var(--input-border-color);
   color: var(--text-color-darker);
 }
 

@@ -77,16 +77,12 @@ let data = [
 
 //----------- Calc Average Score -------------------------
 (() => {
-  const averageFeedbackScore = document.getElementById(
-    "average-feedback-score"
-  );
+  const averageFeedbackScore = document.getElementById("average-feedback-score");
   let arrayStars = [];
   for (let x of data) {
     arrayStars.push(x.stars);
   }
-  let average = (arrayStars.reduce((a, b) => a + b, 0) / data.length).toFixed(
-    2
-  );
+  let average = (arrayStars.reduce((a, b) => a + b, 0) / data.length).toFixed(2);
   averageFeedbackScore.textContent = average;
 })();
 //--------------------------------------------------------
@@ -107,6 +103,7 @@ let data = [
     twoStarTotal,
     oneStarTotal,
   ];
+  
   let ctr = [0, 0, 0, 0, 0];
   let total = 0;
   data.map((x) => x.stars).forEach((x) => ctr[x - 1]++);
@@ -136,38 +133,36 @@ let data = [
 (() => {
   document.getElementById("total-customers").textContent = data.length; // Fill total customers
   sortData("date", "desc"); // initial sort by date
-  generateTable(data); // initial fill of table
+  generateTable(data); // initial table fill
 })();
 //--------------------------------------------------------
+//----------- Fill stars dropdown -------------------------
+(() => {
+  for(let i = 0; i <= 5; i++){
+    let option = document.createElement("option");
+    if(i == 0){
+      option.value = i;
+      option.textContent = "--- Select Value ---";   
+      option.setAttribute("selected", "selected"); 
+    }
+    else{
+      option.value = i;
+      option.textContent = i;    
+    }
+    starsSelect.appendChild(option);
+  }
+})();
+//---------------------------------------------------------
 
 const sortStatus = ["desc", "asc", "asc"];
 // get headers of sortable columns and bind k
-const columnDate = document.getElementById("columnDate");
-const columnTable = document.getElementById("columnTable");
-const columnStars = document.getElementById("columnStars");
-
-//-----------------------------------------------------//
-//Populate Date To and Date From
-let dateSelectFrom = document.getElementById("dateFrom");
-let dateSelectTo = document.getElementById("dateTo");
-
-function selectDate(data, select) {
-  let newArraywithDates = [];
-  data.forEach((x) => newArraywithDates.push(x.date.toDateString()));
-
-  newArraywithDates.forEach((x) => {
-    let optionTag = document.createElement("option");
-    optionTag.textContent = x;
-    select.appendChild(optionTag);
-  });
-}
-
-selectDate(data, dateSelectFrom);
-selectDate(data, dateSelectTo);
-//-----------------------------------------------------//
+const columnDate = document.getElementById("column-date");
+const columnTable = document.getElementById("column-table");
+const columnStars = document.getElementById("column-stars");
+const starsSelect = document.getElementById("stars-dropdown");
 
 function generateTable(data) {
-  const tbody = document.getElementById("tableBody");
+  const tbody = document.getElementById("table-body");
   tbody.innerHTML = "";
 
   data.forEach((item) => {

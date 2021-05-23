@@ -15,13 +15,13 @@
     <div class="container" style="border: 1px solid black;">
         <div id="feedback-container">
             <div class="row">
-                <h1 id="feedbackHeader">Feedback</h1>
-                <h1 id="headerText">Average Feedback</h1>
+                <h1 id="page-title">Feedback</h1>
+                <h1 id="average-feedback-header">Average Feedback</h1>
                 <div class="row">
                     <div class="col-xl-7 col-lg-12" id="star-feedback-container">
                         <div class="row">
                             <span class="col-3">
-                                <i class="ex-block fas fa-star"></i>
+                                <i class="d-inline-block fas fa-star"></i>
                                 <i class="d-inline-block fas fa-star"></i>
                                 <i class="d-inline-block fas fa-star"></i>
                                 <i class="d-inline-block fas fa-star"></i>
@@ -33,7 +33,7 @@
                             </div>
                             <div class="col-xl-2 col-1 text-center" id="5-star-total"></div>
                         </div>
-                        <div class="row ">
+                        <div class="row">
                             <span class="col-3">
                                 <i class="d-inline-block fas fa-star"></i>
                                 <i class="d-inline-block fas fa-star"></i>
@@ -97,37 +97,39 @@
         </div>
         <div id="filters-container">
             <div class="row">
-                <div class="col-2">
+                <div class="col-xl-3 col-md-6">
                     <label class="form-label" for="form-select">Date From</label>
-                    <select class="form-select" id="dateFrom"></select>
+                    <select class="form-select" id="date-from-dropdown"></select>
                 </div>
-                <div class="col-2 offset-1">
+                <div class="col-xl-3 col-md-6">
                     <label class="form-label" for="form-select">Date To</label>
-                    <select class="form-select" id="dateTo"></select>
+                    <select class="form-select" id="date-to=dropdown"></select>
                 </div>
-                <div class="col-2 offset-1">
+                <div class="col-xl-3 col-md-6">
                     <label class="form-label" for="form-select">Table number</label>
-                    <select class="form-select"></select>
+                    <select class="form-select" id="table-number-dropdown">
+                        <option value="0" selected>--- Select Value ---</option>
+                    </select>
                 </div>
-                <div class="col-2 offset-1">
+                <div class="col-xl-3 col-md-6">
                     <label class="form-label" for="form-select">Stars Number</label>
-                    <select class="form-select"></select>
+                    <select class="form-select" id="stars-dropdown"></select>
                 </div>
             </div>
         </div>
         <div id="table-container" class="col-12">
             <table class="table table-bordered table-striped">
-                <thead id="tableHead">
-                    <th class="tableHeader sortableHeader" id="columnDate">Date <i
+                <thead>
+                    <th class="table-header sortable-header" id="column-date">Date <i
                             class="fas fa-long-arrow-alt-down"></i><i class="fas fa-long-arrow-alt-up"
                             style="display: none;"></i></th>
-                    <th class="tableHeader sortableHeader" id="columnTable">Table <i
+                    <th class="table-header sortable-header" id="column-table">Table <i
                             class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></th>
-                    <th class="tableHeader sortableHeader" id="columnStars">Stars <i
+                    <th class="table-header sortable-header" id="column-stars">Stars <i
                             class="fas fa-long-arrow-alt-up"></i><i class="fas fa-long-arrow-alt-down"></i></th>
-                    <th class="tableHeader" id="columnComment">Comment</th>
+                    <th class="table-header" id="columnComment">Comment</th>
                 </thead>
-                <tbody id="tableBody">
+                <tbody id="table-body">
                 </tbody>
             </table>
         </div>
