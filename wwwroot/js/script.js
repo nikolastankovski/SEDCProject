@@ -138,6 +138,8 @@ let data = [
 //--------------------------------------------------------
 //----------- Fill stars dropdown -------------------------
 (() => {
+  const starsSelect = document.getElementById("stars-dropdown");
+  
   for(let i = 0; i <= 5; i++){
     let option = document.createElement("option");
     if(i == 0){
@@ -159,7 +161,6 @@ const sortStatus = ["desc", "asc", "asc"];
 const columnDate = document.getElementById("column-date");
 const columnTable = document.getElementById("column-table");
 const columnStars = document.getElementById("column-stars");
-const starsSelect = document.getElementById("stars-dropdown");
 
 function generateTable(data) {
   const tbody = document.getElementById("table-body");
