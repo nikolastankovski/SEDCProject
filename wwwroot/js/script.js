@@ -127,9 +127,8 @@ let data = [
     rows[i]
       .querySelector(".progress-bar:first-child")
       .setAttribute("aria-valuenow", arr[i].textContent);
-    rows[i].querySelector(".progress-bar:first-child").style.width = `${
-      (parseFloat(arr[i].textContent) * 100) / total
-    }%`;
+    rows[i].querySelector(".progress-bar:first-child").style.width = `${(parseFloat(arr[i].textContent) * 100) / total
+      }%`;
   }
 })();
 //--------------------------------------------------------
@@ -142,7 +141,6 @@ let data = [
 //--------------------------------------------------------
 
 const sortStatus = ["desc", "asc", "asc"];
-
 // get headers of sortable columns and bind k
 const columnDate = document.getElementById("columnDate");
 const columnTable = document.getElementById("columnTable");
@@ -204,6 +202,15 @@ function toggleArrow(col, sortOrder) {
   const down = ".fa-long-arrow-alt-down";
   const up = ".fa-long-arrow-alt-up";
 
+  // reset arrows on all columns
+  for (c of [columnDate, columnStars, columnTable]) {
+    let arr_down = c.querySelector(down);
+    arr_down.style.display = "";
+    let arr_up = c.querySelector(up);
+    arr_up.style.display = "";
+  }
+
+  // and then set correct arrow
   let arr_down = col.querySelector(down);
   arr_down.style.display = sortOrder === "asc" ? "none" : "";
   let arr_up = col.querySelector(up);
