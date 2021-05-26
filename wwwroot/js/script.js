@@ -206,8 +206,6 @@ function toggleArrow(col, sortOrder) {
 }
 
 function sortData(sortByKey, asc) {
-    console.log(sortByKey);
-    console.log(asc);
   data.sort((a, b) => {
     if (asc == "asc") return a[sortByKey] - b[sortByKey];
     return b[sortByKey] - a[sortByKey];
