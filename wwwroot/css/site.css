@@ -22,7 +22,6 @@
 body {
   background-color: var(--body-bgcolor);
 }
-
 .container {
   margin-top: 20px;
   margin-bottom: 20px;
@@ -59,13 +58,15 @@ body {
 }
 .fa-star {
   color: var(--star-color) !important;
-  letter-spacing: 4px;
 }
 .progress-bar {
   background-color: var(--pogress-bar-color) !important;
 }
 #table {
   margin-top: 20px;
+}
+#table-body .fa-star{
+  letter-spacing: 4px;
 }
 .table-header {
   color: var(--text-color);

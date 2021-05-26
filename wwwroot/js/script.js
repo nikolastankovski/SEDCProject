@@ -75,8 +75,8 @@ let data = [
 ];
 //------------------------------------------------------------------
 
-//----------- Calc Average Score -------------------------
 (() => {
+  //----------- Calc Average Score -------------------------
   const averageFeedbackScore = document.getElementById("average-feedback-score");
   let arrayStars = [];
   for (let x of data) {
@@ -84,11 +84,9 @@ let data = [
   }
   let average = (arrayStars.reduce((a, b) => a + b, 0) / data.length).toFixed(2);
   averageFeedbackScore.textContent = average;
-})();
-//--------------------------------------------------------
+  //--------------------------------------------------------
 
-//----------- Fill progress bars -------------------------
-(() => {
+  //----------- Fill progress bars -------------------------
   const fiveStarTotal = document.getElementById("5-star-total");
   const fourStarTotal = document.getElementById("4-star-total");
   const threeStarTotal = document.getElementById("3-star-total");
@@ -96,18 +94,13 @@ let data = [
   const oneStarTotal = document.getElementById("1-star-total");
 
   // parse ratings from 'data'
-  let arr = [
-    fiveStarTotal,
-    fourStarTotal,
-    threeStarTotal,
-    twoStarTotal,
-    oneStarTotal,
-  ];
-  
+  let arr = [fiveStarTotal,fourStarTotal,threeStarTotal,twoStarTotal,oneStarTotal];
   let ctr = [0, 0, 0, 0, 0];
   let total = 0;
+
   data.map((x) => x.stars).forEach((x) => ctr[x - 1]++);
   ctr.reverse();
+
   for (let i = 0; i < 5; i++) {
     arr[i].textContent = ctr[i];
     total += ctr[i];
@@ -124,20 +117,17 @@ let data = [
     rows[i]
       .querySelector(".progress-bar:first-child")
       .setAttribute("aria-valuenow", arr[i].textContent);
-    rows[i].querySelector(".progress-bar:first-child").style.width = `${(parseFloat(arr[i].textContent) * 100) / total
-      }%`;
+    rows[i].querySelector(".progress-bar:first-child").style.width = `${(parseFloat(arr[i].textContent) * 100) / total}%`;
   }
-})();
-//--------------------------------------------------------
-//----------- Fill total clients -------------------------
-(() => {
+  //--------------------------------------------------------
+
+  //----------- Total Customers, Initial Sort and Fill ------
   document.getElementById("total-customers").textContent = data.length; // Fill total customers
   sortData("date", "desc"); // initial sort by date
   generateTable(data); // initial table fill
-})();
-//--------------------------------------------------------
-//----------- Fill stars dropdown -------------------------
-(() => {
+  //--------------------------------------------------------
+
+  //----------- Fill stars dropdown -------------------------
   const starsSelect = document.getElementById("stars-dropdown");
   
   for(let i = 0; i <= 5; i++){
@@ -153,8 +143,8 @@ let data = [
     }
     starsSelect.appendChild(option);
   }
+  //---------------------------------------------------------
 })();
-//---------------------------------------------------------
 
 const sortStatus = ["desc", "asc", "asc"];
 // get headers of sortable columns and bind k
@@ -172,16 +162,18 @@ function generateTable(data) {
       let td = document.createElement("td");
       if (index == 0) {
         td.textContent = val.toDateString();
-      } else if (index == 1) {
+      } 
+      else if (index == 1) {
         td.textContent = "Table " + val;
-      } else if (index == 2) {
+      } 
+      else if (index == 2) {
         for (let i = 1; i <= val; i++) {
           let star = document.createElement("i");
           star.classList.add("fas", "fa-star");
-          // star.style.color = "#ffcd00";
           td.appendChild(star);
         }
-      } else {
+      } 
+      else {
         td.textContent = val;
       }
       tableRow.appendChild(td);
@@ -214,6 +206,8 @@ function toggleArrow(col, sortOrder) {
 }
 
 function sortData(sortByKey, asc) {
+    console.log(sortByKey);
+    console.log(asc);
   data.sort((a, b) => {
     if (asc == "asc") return a[sortByKey] - b[sortByKey];
     return b[sortByKey] - a[sortByKey];
